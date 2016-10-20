@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Transaksi">
+            <menu>
+            <item
+                android:id="@+id/nav_pemasukan"
+                android:icon="@drawable/ic_arrow_downward_black_24dp"
+                android:title="Pemasukan" />
+            <item
+                android:id="@+id/nav_pengeluaran"
+                android:icon="@drawable/ic_arrow_upward_black_24dp"
+                android:title="Pengeluaran" />
+            <item
+                android:id="@+id/nav_anggaran"
+                android:icon="@drawable/ic_add_alert_black_24dp"
+                android:title="Anggaran" />
+            <item
+                android:id="@+id/nav_rekap"
+                android:icon="@drawable/ic_import_contacts_black_24dp"
+                android:title="Rekapitulasi" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="Lainnya">
+        <menu>
+            <item
+                android:id="@+id/nav_tentang"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="Tentang" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Pengaturan" />
+        </menu>
+    </item>
+
+</menu>

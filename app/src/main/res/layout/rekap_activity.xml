@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rekap_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/rekap_tgl_sampai"
+        android:layout_alignLeft="@+id/rekap_label_sampai"
+        android:layout_alignStart="@+id/rekap_label_sampai">
+
+        <RadioButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rekap_radio_pemasukan"
+            android:text="Pemasukan"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:singleLine="false"
+            android:onClick="radioOnClick"
+            android:textSize="@dimen/abc_text_size_medium_material" />
+
+        <RadioButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rekap_radio_pengeluaran"
+            android:text="Pengeluaran"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:onClick="radioOnClick"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_marginTop="10dp" />
+        <RadioButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rekap_radio_saldo"
+            android:text="Saldo"
+            android:visibility="visible"
+            android:onClick="radioOnClick"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_marginTop="10dp" />
+        <RadioButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rekap_radio_anggaran"
+            android:text="Anggaran"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:onClick="radioOnClick"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:layout_marginTop="10dp" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/rekap_label_dari"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DARI TANGGAL"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_below="@+id/rekap_label_judul"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REKAP"
+        android:id="@+id/rekap_btn_proses"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#b4d65e"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/rekap_label_judul"
+        android:layout_alignStart="@+id/rekap_label_judul"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PILIH KATAGORI REKAP DIBAWAH INI"
+        android:id="@+id/rekap_label_judul"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/rekap_label_sampai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAMPAI TANGGAL"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignLeft="@+id/rekap_label_dari"
+        android:layout_alignStart="@+id/rekap_label_dari" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:ems="10"
+        android:id="@+id/rekap_tgl_sampai"
+        android:enabled="true"
+        android:editable="true"
+        android:layout_alignLeft="@+id/rekap_tgl_dari"
+        android:layout_alignStart="@+id/rekap_tgl_dari"
+        android:layout_below="@+id/rekap_tgl_dari"
+        android:layout_alignRight="@+id/rekap_tgl_dari"
+        android:layout_alignEnd="@+id/rekap_tgl_dari" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:id="@+id/rekap_tgl_dari"
+        android:layout_alignBottom="@+id/rekap_label_dari"
+        android:layout_toRightOf="@+id/rekap_label_sampai"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_alignRight="@+id/rekap_label_judul"
+        android:layout_alignEnd="@+id/rekap_label_judul" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LENGKAP"
+        android:id="@+id/rekap_btn_lengkap"
+        android:background="#b4d65e"
+        android:layout_alignTop="@+id/rekap_btn_proses"
+        android:layout_alignRight="@+id/rekap_tgl_sampai"
+        android:layout_alignEnd="@+id/rekap_tgl_sampai" />
+
+
+</RelativeLayout>

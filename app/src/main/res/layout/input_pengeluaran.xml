@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pengeluaran_label_nama"
+            android:id="@+id/label_nama_pengeluaran"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#ef1212"
+            android:autoText="false" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/text_nama_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:hint="Nama Pengeluaran"
+            android:imeOptions="actionDone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pengeluaran_label_tanggal"
+            android:id="@+id/label_tanggal_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#ef1212" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:ems="10"
+            android:id="@+id/text_tanggal_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:hint="Tanggal Pengeluaran" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pengeluaran_label_jumlah"
+            android:id="@+id/label_jumlah_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#ef1212" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/text_jumlah_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:hint="Rp." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pengeluaran_label_katagori"
+            android:id="@+id/label_katagori_pengeluaran"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:textColor="#ef1212" />
+
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/katagori_pengeluaran_spinner"
+            android:layout_marginLeft="10dp"
+            style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+            android:background="#ef1212" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_simpan"
+        android:id="@+id/btn_simpan_pengeluaran"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:background="#0f07ef"
+        style="@style/Widget.AppCompat.Button.Colored" />
+</RelativeLayout>

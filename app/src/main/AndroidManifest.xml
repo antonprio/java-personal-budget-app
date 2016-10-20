@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skripsi.antonprio.pencatatanpersonal">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Home.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home.Home"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/home_title"/>
+        <activity
+            android:name=".Pengaturan.Login"
+            android:label="Masuk"/>
+        <activity
+            android:name=".Pengaturan.Tentang"
+            android:parentActivityName=".Home.Home"
+            android:label="Tentang"/>
+        <activity
+            android:name=".Pemasukan.PemasukanActivity"
+            android:label="Pemasukan"
+            android:parentActivityName=".Home.Home" />
+        <activity
+            android:name=".Pengeluaran.PengeluaranActivity"
+            android:label="Pengeluaran"
+            android:parentActivityName=".Home.Home" />
+        <activity
+            android:name=".Pengeluaran.InputPengeluaran"
+            android:label="Pengeluaran"
+            android:parentActivityName=".Pengeluaran.PengeluaranActivity" />
+        <activity
+            android:name=".Pemasukan.InputPemasukan"
+            android:label="Pemasukan"
+            android:parentActivityName=".Pemasukan.PemasukanActivity" />
+        <activity
+            android:name=".Rekap.RekapActivity"
+            android:label="Rekapitulasi"
+            android:parentActivityName=".Home.Home" />
+        <activity
+            android:name=".Rekap.HasilRekap"
+            android:label="Rekapitulasi"
+            android:parentActivityName=".Rekap.RekapActivity" />
+        <activity
+            android:name=".Anggaran.AnggaranActivity"
+            android:label="Rencana Anggaran"
+            android:parentActivityName=".Home.Home" />
+        <activity
+            android:name=".Anggaran.InputAnggaran"
+            android:label="Rencana Anggaran"
+            android:parentActivityName=".Anggaran.AnggaranActivity" />
+        <activity
+            android:name=".Rekap.HasilSaldoLengkap"
+            android:label="Rekapitulasi"
+            android:parentActivityName=".Rekap.RekapActivity" />
+        <activity
+            android:name=".Rekap.HasilPemasukanRekap"
+            android:label="Rekapitulasi Pemasukan"
+            android:parentActivityName=".Rekap.RekapActivity" />
+        <activity
+            android:name=".Rekap.HasilPemasukanLengkap"
+            android:label="Pemasukan Lengkap"
+            android:parentActivityName=".Rekap.RekapActivity" />
+        <receiver
+            android:name=".Anggaran.AnggaranManager"
+            android:label="Alarm Manager">
+            <intent-filter>
+                <action android:name="Alarm" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".Pengaturan.PengaturanActivity"
+            android:label="Pengaturan"
+            android:parentActivityName=".Home.Home"/>
+    </application>
+
+</manifest>

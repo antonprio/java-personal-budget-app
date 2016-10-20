@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pemasukan_label_nama"
+            android:id="@+id/label_nama"
+            android:textColor="#1977e3"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/text_nama"
+            android:imeOptions="actionDone"
+            android:hint="Nama"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pemasukan_label_tanggal"
+            android:id="@+id/label_tanggal"
+            android:textColor="#1977e3"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_tanggal"
+            android:focusable="false"
+            android:layout_marginLeft="10dp"
+            android:hint="Tanggal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pemasukan_label_jumlah"
+            android:id="@+id/label_jumlah"
+            android:textColor="#1977e3"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/text_jumlah"
+            android:layout_marginLeft="10dp"
+            android:hint="Rp." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/pemasukan_label_kategori"
+            android:id="@+id/label_katagori"
+            android:textColor="#1977e3"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/katagori_spinner"
+            android:layout_marginLeft="10dp"
+            style="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+            android:background="#1977e3" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_simpan"
+        android:id="@+id/btn_simpan"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="#0f07ef"
+        android:textStyle="bold"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

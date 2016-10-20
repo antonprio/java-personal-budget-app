@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nama Anggaran"
+        android:id="@+id/label_nama_anggaran"
+        android:imeOptions="actionNext"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nama_anggaran"
+        android:layout_below="@+id/label_nama_anggaran"
+        android:layout_alignLeft="@+id/label_nama_anggaran"
+        android:layout_alignStart="@+id/label_nama_anggaran"
+        android:hint="Contoh: Anggaran 1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Jumlah Anggaran"
+        android:id="@+id/label_jumlah_anggaran"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/nama_anggaran"
+        android:layout_alignLeft="@+id/nama_anggaran"
+        android:layout_alignStart="@+id/nama_anggaran" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/jumlah_anggaran"
+        android:imeOptions="actionDone"
+        android:layout_below="@+id/label_jumlah_anggaran"
+        android:layout_alignLeft="@+id/label_jumlah_anggaran"
+        android:layout_alignStart="@+id/label_jumlah_anggaran"
+        android:hint="Contoh: 1000000"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Tanggal Anggaran"
+        android:id="@+id/label_tanggal_anggaran"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/jumlah_anggaran"
+        android:layout_alignLeft="@+id/jumlah_anggaran"
+        android:layout_alignStart="@+id/jumlah_anggaran" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:focusable="false"
+        android:id="@+id/tanggal_anggaran"
+        android:hint="Contoh: 2016-06-06"
+        android:layout_below="@+id/label_tanggal_anggaran"
+        android:layout_alignLeft="@+id/label_tanggal_anggaran"
+        android:layout_alignStart="@+id/label_tanggal_anggaran" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Prioritas"
+        android:id="@+id/label_prioritas_anggaran"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/tanggal_anggaran"
+        android:layout_alignLeft="@+id/tanggal_anggaran"
+        android:layout_alignStart="@+id/tanggal_anggaran" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label_prioritas_anggaran"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup2"
+        android:layout_marginLeft="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rendah"
+            android:onClick="radioAnggaran"
+            android:id="@+id/prioritas_rendah"
+            android:layout_below="@+id/label_prioritas_anggaran"
+            android:layout_alignLeft="@+id/label_prioritas_anggaran"
+            android:layout_alignStart="@+id/label_prioritas_anggaran" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sedang"
+            android:onClick="radioAnggaran"
+            android:id="@+id/prioritas_sedang" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tinggi"
+            android:onClick="radioAnggaran"
+            android:id="@+id/prioritas_tinggi"
+            android:typeface="normal"
+            android:layout_alignTop="@+id/radioGroup2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:id="@+id/button_simpan_anggaran"
+        android:layout_below="@+id/katagori_anggaran"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        style="@android:style/Widget.Button"
+        android:background="@android:color/holo_green_dark" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/katagori_anggaran"
+        android:layout_below="@+id/label_katagori_anggaran"
+        android:layout_alignLeft="@+id/radioGroup2"
+        android:layout_alignStart="@+id/radioGroup2"
+        android:background="@android:color/holo_green_dark"
+        android:layout_alignRight="@+id/button_simpan_anggaran"
+        android:layout_alignEnd="@+id/button_simpan_anggaran"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Katagori Anggaran"
+        android:id="@+id/label_katagori_anggaran"
+        android:imeOptions="actionNext"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/radioGroup2"
+        android:layout_alignLeft="@+id/radioGroup2"
+        android:layout_alignStart="@+id/radioGroup2" />
+
+</RelativeLayout>

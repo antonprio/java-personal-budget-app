@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home.Home"
+    tools:showIn="@layout/app_bar_home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_saldo"
+        android:text="Total Saldo Anda"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_saldo"
+        android:text="Rp. 0"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_below="@+id/label_saldo"
+        android:layout_centerInParent="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/r_view_home_pemasukan"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/label_aktivitas"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_total_pemasukan"
+        android:text="Total Pemasukan"
+        android:layout_below="@+id/r_view_home_pemasukan"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_total_pemasukan"
+        android:text="Rp. 0"
+        android:layout_alignEnd="@+id/label_saldo"
+        android:layout_alignRight="@+id/label_saldo"
+        android:layout_below="@+id/r_view_home_pemasukan"
+        android:layout_alignParentRight="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/r_view_home_pengeluaran"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/label_total_pemasukan"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_total_pengeluaran"
+        android:text="Total Pengeluaran"
+        android:layout_below="@+id/r_view_home_pengeluaran"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_total_pengeluaran"
+        android:text="Rp.0"
+        android:layout_alignStart="@+id/text_total_pemasukan"
+        android:layout_alignLeft="@+id/text_total_pemasukan"
+        android:layout_alignEnd="@+id/text_total_pemasukan"
+        android:layout_alignRight="@+id/text_total_pemasukan"
+        android:layout_below="@+id/r_view_home_pengeluaran" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aktivitas Terakhir"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/text_saldo"
+        android:id="@+id/label_aktivitas" />
+</RelativeLayout>
